@@ -42,4 +42,4 @@
 - 以上方法均无效时，建议前往百度贴吧、Steam社区等平台求助。**本项目仅负责手册改造，不处理游戏本身的运行问题，请勿在项目Issue中反馈此类问题**。
 
 # 4. 官方快速开始教程
-想快速掌握游戏启动页面操作、基础设置与核心玩法？直接访问：[https://jaymushui.github.io/JayMuShui/FortuneSummoners-Manual/index.html#start](https://jaymushui.github.io/JayMuShui/FortuneSummoners-Manual/index.html#start)（这是我们现代化改造后的官方手册入口，支持中英双语切换，操作说明清晰易懂）
+想快速掌握游戏启动页面操作、基础设置与核心玩法？直接访问：[https://jaymushui.github.io/FortuneSummoners-Manual/#start](https://jaymushui.github.io/FortuneSummoners-Manual/#start)（这是我们现代化改造后的官方手册入口，支持中英双语切换，操作说明清晰易懂）

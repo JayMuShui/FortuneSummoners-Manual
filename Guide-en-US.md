@@ -23,4 +23,4 @@ Extract the downloaded compressed package, locate the `ddraw.dll` file inside, a
 - If none of the above methods work, we recommend seeking help from communities like the Steam Community. 
 
 # 3. Official Quick Start Guide
-Want to quickly master game launch operations, basic settings, and core gameplay? Visit directly: [https://jaymushui.github.io/JayMuShui/FortuneSummoners-Manual/index.html#start](https://jaymushui.github.io/JayMuShui/FortuneSummoners-Manual/index.html#start) (This is the entrance to our modernized official manual, supporting both Chinese and English switching with clear and easy-to-understand operation instructions).
+Want to quickly master game launch operations, basic settings, and core gameplay? Visit directly: [https://jaymushui.github.io/FortuneSummoners-Manual/#start](https://jaymushui.github.io/FortuneSummoners-Manual/#start) (This is the entrance to our modernized official manual, supporting both Chinese and English switching with clear and easy-to-understand operation instructions).

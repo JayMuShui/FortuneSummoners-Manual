@@ -114,12 +114,12 @@ FortuneSummoners-Manual/
 
 ### 场景一：在线访问
 直接通过 GitHub Pages 访问已部署的现代化版本，无需下载任何文件，打开浏览器即可使用：
-- **HTML5访问地址**：`https://jaymushui.github.io/JayMuShui/FortuneSummoners-Manual`
+- **HTML5访问地址**：`https://jaymushui.github.io/FortuneSummoners-Manual`
 - **使用说明**：
   1.  打开上述地址后，默认进入简体中文版本（可通过右上角语言切换按钮切换为英文原版）
   2.  左侧侧边栏为手册目录，点击对应条目即可无刷新查看正文内容
   3.  支持浏览器书签收藏特定章节（基于哈希路由），再次打开可直接跳转至对应内容
-- ~~**HTML4访问地址**：`https://jaymushui.github.io/JayMuShui/FortuneSummoners-Manual/_html4/main.htm`~~
+- ~~**HTML4访问地址**：`https://jaymushui.github.io/FortuneSummoners-Manual/_html4/main.htm`~~
 - ~~**使用说明**：仅用于留档，无法保证其兼容性~~
 
 ### 场景二：本地快速使用
@@ -211,7 +211,7 @@ Code Review 已通过 Self Review 和 AI Review，所有功能均能正常落地
 本项目的所有代码与资源均开源在 GitHub 仓库，欢迎有兴趣的开发者在遵守版权声明的前提下，进行二次开发与优化，共同为小众游戏资料留存与前端技术学习贡献力量。
 
 # 🔗 参考链接
-- [Steam English version（1.2）官方文档HTML5重置版（English/简体中文）](https://jaymushui.github.io/JayMuShui/FortuneSummoners-Manua)
+- [Steam English version（1.2）官方文档HTML5重置版（English/简体中文）](https://jaymushui.github.io/FortuneSummoners-Manual)
 - [Steam English version（1.2）](https://store.steampowered.com/app/203510/)
 - [Steam 日本語 version（1.6）](https://store.steampowered.com/app/1381770/)
 - [游戏官网（日本語）](http://lizsoft.jp/fs/)

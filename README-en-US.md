@@ -116,7 +116,7 @@ The project supports four scenarios: online access, quick local use, local cloni
 
 Access the deployed modern version via GitHub Pages—no downloads needed:
 
-- **HTML5 Access**: `https://jaymushui.github.io/JayMuShui/FortuneSummoners-Manual`
+- **HTML5 Access**: `https://jaymushui.github.io/FortuneSummoners-Manual`
 - **Instructions**:
   1. Defaults to Simplified Chinese (switch to English via top-right button).
   2. Left sidebar for navigation; click for seamless content loading.
@@ -211,7 +211,7 @@ All code and resources are open-source on GitHub. Contributions welcome under co
 
 # 🔗 Reference Links
 
-- [Steam English ver.1.2 HTML5 Modernized Manual (English/Simplified Chinese)](https://jaymushui.github.io/JayMuShui/FortuneSummoners-Manual)
+- [Steam English ver.1.2 HTML5 Modernized Manual (English/Simplified Chinese)](https://jaymushui.github.io/FortuneSummoners-Manual)
 - [Steam English ver.1.2](https://store.steampowered.com/app/203510/)
 - [Steam Japanese ver.1.6](https://store.steampowered.com/app/1381770/)
 - [Official Website (Japanese)](http://lizsoft.jp/fs/)
