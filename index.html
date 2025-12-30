@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- 整体说明：从HTML4老旧frameset语法重构为HTML5标准页面 | Overall: Refactored from HTML4 outdated frameset syntax to HTML5 standard page -->
+<html lang="en">
+<head>
+    <!-- 字符编码：UTF-8支持多语言（中文/英文） | Charset: UTF-8 supports multi-language (Chinese/English) -->
+    <meta charset="UTF-8">
+    <!-- 视口设置：适配移动端设备，避免页面缩放错乱 | Viewport: Adapt to mobile devices, avoid page zoom disorder -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 网页图标：设置标签栏自定义图标，提升辨识度 | Favicon: Set custom tab icon for better recognition -->
+    <link rel="icon" href="favicon.ico">
+    <!-- 页面标题：默认英文手册标题（将通过JS动态切换双语） | Page Title: Default English manual title (will switch bilingual via JS) -->
+    <title>Fortune Summoners Manual</title>
+    <!-- 引入外部样式表：分离结构与样式，便于维护和扩展 | Import external CSS: Separate structure and style for easier maintenance -->
+    <link rel="stylesheet" href="./styles/contents.css">
+    <link rel="stylesheet" href="./styles/fs.css">
+    <link rel="stylesheet" href="./styles/adapt-html5.css">
+</head>
+<body>
+    <!-- 主容器：使用flex布局实现左右分栏，复刻原HTML4 frameset的168px+自适应布局 | Main Container: Use flex layout for left-right columns, replicate original HTML4 frameset (168px + adaptive) -->
+    <div class="main-container">
+        <!-- 语言切换器：新增双语切换功能，满足中英文用户需求 | Language Switcher: New bilingual switch function for Chinese/English users -->
+        <div class="language-switcher">
+            <button class="lang-btn active" data-lang="zh-CN" onclick="switchLanguage('zh-CN')">简体中文</button>
+            <button class="lang-btn" data-lang="en-US" onclick="switchLanguage('en-US')">English</button>
+            <!-- GitHub外链：跳转项目仓库，保留原项目关联 | GitHub Link: Jump to project repository, keep original project association -->
+            <a href="https://github.com/JayMuShui/FortuneSummoners-Manual" target="_blank" class="github-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="white" style="vertical-align: middle; margin-right: 4px;">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                GitHub
+            </a>
+        </div>
+
+        <!-- 左侧边栏：对应原HTML4的fraContents框架，固定168px宽度，通过JS动态加载内容 | Left Sidebar: Corresponding to HTML4 fraContents frame, fixed 168px width, dynamically load content via JS -->
+        <aside class="sidebar-frame" id="sidebar">
+            <!-- 动态加载 contents.html / contents_basic.html / contents_ex.html | Dynamically load contents.html / contents_basic.html / contents_ex.html -->
+        </aside>
+
+        <!-- 右侧内容区：对应原HTML4的fraMain框架，自适应宽度，通过JS动态加载内容 | Right Content Area: Corresponding to HTML4 fraMain frame, adaptive width, dynamically load content via JS -->
+        <main class="content-frame" id="content">
+            <!-- 动态加载内容页面 | Dynamically load content pages -->
+            <!-- 页脚iframe：独立加载页脚组件，通过JS根据语言切换src | Footer iframe: Independently load footer component, switch src via JS according to language -->
+            <iframe id="footer-iframe" class="c_footer" frameborder="0"></iframe>
+        </main>
+    </div>
+
+    <!-- 引入导航脚本：实现动态加载、语言切换等交互功能，替代原HTML4的静态框架 | Import navigation script: Implement dynamic loading, language switch and other interactions, replace HTML4 static frames -->
+    <script src="./scripts/navigation.js"></script>
+</body>
+</html>
+
+<!-- 原HTML4 main.htm 简要修改思路 | Brief Modification Ideas for Original HTML4 main.htm -->
+<!-- 1.  移除HTML4专属的 <frameset> 和 <frame> 标签（现代浏览器对其支持不佳，无语义、不灵活） | Remove HTML4 exclusive <frameset> and <frame> tags (poor modern browser support, no semantics, inflexible) -->
+<!-- 2.  替换编码：将 Shift_JIS 改为 UTF-8，支持多语言显示（中文/英文） | Replace encoding: Shift_JIS → UTF-8, support multi-language display (Chinese/English) -->
+<!-- 3.  布局复刻：用 HTML5 + CSS flex 布局替代 frameset，实现左侧168px固定、右侧自适应的分栏 | Replicate layout: HTML5 + CSS flex layout instead of frameset, realize left 168px fixed, right adaptive columns -->
+<!-- 4.  内容加载：将 <frame> 的静态 src 改为 JS 动态加载，支持多语言切换和无刷新导航 | Content loading: Change <frame> static src to JS dynamic loading, support multi-language switch and refresh-free navigation -->
+<!-- 5.  语义化优化：用 <aside>（侧边栏）、<main>（主内容）替代无语义的 <frame>，提升可读性和SEO | Semantic optimization: <aside> (sidebar)、<main> (main content) instead of non-semantic <frame>, improve readability and SEO -->
+<!-- 6.  功能扩展：新增语言切换、组件化页脚等功能，满足现代使用需求 | Function expansion: Add language switch, componentized footer and other functions to meet modern usage needs -->
+
+<!--
+<!doctype html public "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<title>Fortune Summoners Manual</title>
+</head>
+
+<frameset cols="168,*" border="0">
+<frame src="./contents_basic.htm" name="fraContents" scrolling="no" noresize style="border-width:0pt;">
+<frame src="./concept.htm" name="fraMain" scrolling="yes" style="border-left:rgb(120,160,255) 1pt solid;">
+</frameset>
+
+</html>
+-->

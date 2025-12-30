@@ -1,0 +1,386 @@
+/* 全局样式重置 | Global style reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; /* 盒模型为border-box，宽高包含内边距和边框 | Box model: border-box (width/height includes padding and border) */
+}
+
+/* 页面主体基础样式 | Page body basic styles */
+body {
+	font-size: 10pt; /* 基础字体大小 | Basic font size */
+	line-height: 20pt; /* 行高 | Line height */
+	margin: 0;
+	padding: 0;
+	color: #808080; /* 字体颜色 | Font color */
+	background-color: rgb(255, 255, 255); /* 背景颜色：白色 | Background color: white */
+	overflow: hidden; /* 隐藏页面整体滚动条 | Hide global page scrollbar */
+}
+
+/* 主容器：复刻frameset布局 | Main container: Replicate frameset layout */
+.main-container {
+	display: flex; /* 弹性布局实现左右分栏 | Flex layout for left-right columns */
+	width: 100vw; /* 宽度占满视口 | Full viewport width */
+	height: 100vh; /* 高度占满视口 | Full viewport height */
+	position: relative; /* 相对定位，作为子元素绝对定位的容器 | Relative positioning (container for absolute child elements) */
+}
+
+/* 语言切换器样式 | Language switcher styles */
+.language-switcher {
+	position: absolute; /* 绝对定位 | Absolute positioning */
+	top: 8px; /* 距离顶部8px | 8px from top */
+	right: 8px; /* 距离右侧8px | 8px from right */
+	z-index: 1000; /* 提高层级，确保显示在最上层 | High z-index to show on top */
+	display: flex; /* 弹性布局，按钮横向排列 | Flex layout for horizontal button alignment */
+	gap: 4px; /* 按钮之间间距4px | 4px gap between buttons */
+}
+
+/* 语言切换按钮基础样式 | Language button basic styles */
+.lang-btn {
+	padding: 4px 12px; /* 内边距 | Padding */
+	background-color: rgb(120, 160, 255); /* 背景色：淡蓝色 | Background color: light blue */
+	color: white; /* 字体颜色：白色 | Font color: white */
+	border: none; /* 去除边框 | Remove border */
+	cursor: pointer; /* 鼠标悬浮显示手型 | Cursor: pointer on hover */
+	font-size: 10pt; /* 字体大小 | Font size */
+	text-decoration: none; /* 去除下划线 | Remove underline */
+}
+
+/* 语言切换按钮悬浮效果 | Language button hover effect */
+.lang-btn:hover {
+	background-color: rgb(60, 100, 200); /* 背景色：深一点的蓝色 | Background color: darker blue */
+}
+
+/* 当前激活的语言按钮样式 | Active language button styles */
+.lang-btn.active {
+	background-color: rgb(60, 100, 200); /* 背景色：深蓝色 | Background color: dark blue */
+	font-weight: bold; /* 字体加粗 | Bold font */
+}
+
+/* GitHub按钮基础样式 | GitHub button basic styles */
+.github-btn {
+	padding: 4px 12px; /* 内边距 | Padding */
+	background-color: rgb(0, 0, 0); /* 背景色：黑色 | Background color: black */
+	color: white; /* 字体颜色：白色 | Font color: white */
+	border: none; /* 去除边框 | Remove border */
+	cursor: pointer; /* 鼠标悬浮显示手型 | Cursor: pointer on hover */
+	font-size: 10pt; /* 字体大小 | Font size */
+	text-decoration: none; /* 去除下划线 | Remove underline */
+	display: inline-flex; /* 内联弹性布局，便于图标和文字对齐 | Inline flex layout for icon and text alignment */
+	align-items: center; /* 垂直居中对齐 | Vertical center alignment */
+}
+
+/* GitHub按钮悬浮效果 | GitHub button hover effect */
+.github-btn:hover {
+	background-color: rgb(30, 30, 30); /* 背景色：深灰色 | Background color: dark gray */
+}
+
+/* 左侧边栏样式 | Left sidebar styles */
+.sidebar-frame {
+	width: 168px; /* 固定宽度168px | Fixed width: 168px */
+	height: 100vh; /* 高度占满视口 | Full viewport height */
+	background-color: rgb(255, 255, 255); /* 背景色：白色 | Background color: white */
+	overflow-y: auto; /* 垂直方向超出可滚动 | Vertical scroll when content overflows */
+	overflow-x: hidden; /* 水平方向隐藏超出内容 | Hide horizontal overflow content */
+	flex-shrink: 0; /* 不允许收缩，保持固定宽度 | Do not shrink, keep fixed width */
+}
+
+/* 右侧内容区域样式 | Right content area styles */
+.content-frame {
+	flex: 1; /* 自适应剩余宽度 | Adapt to remaining width */
+	height: 100vh; /* 高度占满视口 | Full viewport height */
+	background-color: rgb(255, 255, 255); /* 背景色：白色 | Background color: white */
+	border-left: rgb(120, 160, 255) 1pt solid; /* 左侧边框：淡蓝色 | Left border: light blue */
+	overflow-y: auto; /* 垂直方向超出可滚动 | Vertical scroll when content overflows */
+	overflow-x: hidden; /* 水平方向隐藏超出内容 | Hide horizontal overflow content */
+}
+
+/* 内容区域主体包裹样式 | Content area main wrapper styles */
+.content-frame .c_main_body {
+	font-size: 10pt; /* 字体大小 | Font size */
+	line-height: 16pt; /* 行高 | Line height */
+	margin: 0;
+	padding: 0;
+	text-align: left; /* 文本左对齐 | Text align: left */
+	background-color: #ffffff; /* 背景色：白色 | Background color: white */
+	width: 100%; /* 宽度100% | Full width */
+}
+
+/* 二级标题样式：复刻原始设计 | Level 2 title styles: Replicate original design */
+.content-frame .c_title2,
+.c_main_body .c_title2 {
+	background-color: rgb(255, 255, 255); /* 背景色：白色 | Background color: white */
+	font-size: 16pt; /* 字体大小 | Font size */
+	font-weight: bold; /* 字体加粗 | Bold font */
+	color: white; /* 字体颜色：白色 | Font color: white */
+	padding: 16px 0px 10px 32px; /* 内边距 | Padding */
+	height: 48px; /* 高度48px | Height: 48px */
+	background-image: url('../images/common/back_title.jpg'); /* 背景图片 | Background image */
+	background-repeat: no-repeat; /* 背景图片不重复 | No background repeat */
+	margin: 0;
+	margin-bottom: 0;
+	line-height: 22px; /* 行高 | Line height */
+	display: block; /* 块级元素 | Block element */
+	box-sizing: content-box; /* 盒模型：content-box，宽高不包含内边距和边框 | Box model: content-box (width/height excludes padding/border) */
+}
+
+/* 主体内容块样式 | Main content block styles */
+.content-frame .c_block_main {
+	text-align: left; /* 文本左对齐 | Text align: left */
+	width: 720px; /* 固定宽度720px | Fixed width: 720px */
+	padding: 4px 4px 4px 28px; /* 内边距 | Padding */
+}
+
+/* 内容子块样式 | Content sub-block styles */
+.content-frame .c_block_body {
+	text-align: left; /* 文本左对齐 | Text align: left */
+	padding: 16px 24px 48px 24px; /* 内边距 | Padding */
+}
+
+/* 三级标题样式 | Level 3 title styles */
+.content-frame .c_title3 {
+	margin: 40px 24px 16px 24px; /* 外边距 | Margin */
+	padding-left: 8px; /* 左侧内边距 | Left padding */
+	border-left: solid rgb(120, 160, 255) 8px; /* 左侧边框：淡蓝色8px | Left border: 8px light blue */
+	border-bottom: solid #808080 1px; /* 底部边框：灰色1px | Bottom border: 1px gray */
+	font-size: 14pt; /* 字体大小 | Font size */
+	font-weight: bold; /* 字体加粗 | Bold font */
+}
+
+/* 四级标题样式 | Level 4 title styles */
+.content-frame .c_title4 {
+	font-size: 11pt; /* 字体大小 | Font size */
+	font-weight: bold; /* 字体加粗 | Bold font */
+	line-height: 16pt; /* 行高 | Line height */
+	color: rgb(255, 0, 255); /* 字体颜色：洋红 | Font color: magenta */
+	margin: 32px 0px 8px 0px; /* 外边距 | Margin */
+}
+
+/* 表格基础样式 | Table basic styles */
+.content-frame .c_table {
+	border-collapse: collapse; /* 表格边框合并 | Collapse table borders */
+	border-style: solid; /* 边框样式：实线 | Border style: solid */
+	border: rgb(120, 120, 200) 1pt solid; /* 边框：蓝紫色1pt | Border: 1pt blue-purple */
+	padding: 0;
+	margin: 0;
+}
+
+/* 表格标题单元格样式 | Table title cell styles */
+.content-frame .c_field_title {
+	color: white; /* 字体颜色：白色 | Font color: white */
+	background-color: rgb(120, 120, 200); /* 背景色：蓝紫色 | Background color: blue-purple */
+	border: #ffffff 1pt solid; /* 边框：白色1pt | Border: 1pt white */
+	padding: 8px; /* 内边距 | Padding */
+}
+
+/* 表格视图单元格样式 | Table view cell styles */
+.content-frame .c_field_view {
+	color: white; /* 字体颜色：白色 | Font color: white */
+	background-color: #000000; /* 背景色：黑色 | Background color: black */
+	border: #ffffff 1pt solid; /* 边框：白色1pt | Border: 1pt white */
+	padding: 0; /* 内边距为0 | No padding */
+}
+
+/* 表格居中标题单元格样式 | Table centered title cell styles */
+.content-frame .c_field_titlec {
+	color: white; /* 字体颜色：白色 | Font color: white */
+	background-color: rgb(120, 120, 200); /* 背景色：蓝紫色 | Background color: blue-purple */
+	text-align: center; /* 文本居中对齐 | Text align: center */
+	border: #ffffff 1pt solid; /* 边框：白色1pt | Border: 1pt white */
+	padding: 8px; /* 内边距 | Padding */
+}
+
+/* 表格数据单元格样式 | Table data cell styles */
+.content-frame .c_field_data {
+	background-color: rgb(255, 255, 255); /* 背景色：白色 | Background color: white */
+	border: rgb(120, 120, 200) 1pt solid; /* 边框：蓝紫色1pt | Border: 1pt blue-purple */
+	padding: 8px; /* 内边距 | Padding */
+}
+
+/* 详情说明样式 | Detail description styles */
+.content-frame .c_detail {
+	border-style: dotted; /* 边框样式：虚线 | Border style: dotted */
+	border-width: 1pt; /* 边框宽度1pt | Border width: 1pt */
+	padding: 8px; /* 内边距 | Padding */
+	font-size: 9pt; /* 字体大小 | Font size */
+}
+
+/* 截图/图片样式 | Screenshot/image styles */
+.content-frame .c_screen {
+	border-style: solid; /* 边框样式：实线 | Border style: solid */
+	border-width: 1px; /* 边框宽度1px | Border width: 1px */
+}
+
+/* 提示框内容样式 | Tip box content styles */
+.content-frame .c_advice {
+	border: 1pt solid rgb(180, 180, 140); /* 边框：淡黄绿色1pt | Border: 1pt light yellow-green */
+	background-color: rgb(255, 255, 230); /* 背景色：浅黄 | Background color: light yellow */
+	padding: 16px 32px 0px 32px; /* 内边距 | Padding */
+	margin: 0px 0px 24px 0px; /* 外边距 | Margin */
+	font-size: 9pt; /* 字体大小 | Font size */
+}
+
+/* 提示框标题样式 | Tip box title styles */
+.content-frame .c_advice_title {
+	background-color: rgb(180, 180, 140); /* 背景色：淡黄绿色 | Background color: light yellow-green */
+	color: rgb(255, 255, 255); /* 字体颜色：白色 | Font color: white */
+	font-weight: bold; /* 字体加粗 | Bold font */
+	text-align: center; /* 文本居中对齐 | Text align: center */
+	font-size: 11pt; /* 字体大小 | Font size */
+	margin: 24px 0px 0px 0px; /* 外边距 | Margin */
+	line-height: 16pt; /* 行高 | Line height */
+}
+
+/* 链接默认样式 | Link default styles */
+.content-frame a {
+	color: #ff00ff; /* 字体颜色：洋红 | Font color: magenta */
+}
+
+/* 已访问链接样式 | Visited link styles */
+.content-frame a:visited {
+	color: #ff00ff; /* 字体颜色：洋红 | Font color: magenta */
+}
+
+/* 链接悬浮样式 | Link hover styles */
+.content-frame a:hover {
+	background-color: #ff00ff; /* 背景色：洋红 | Background color: magenta */
+	color: #ffffff; /* 字体颜色：白色 | Font color: white */
+}
+
+/* 下一页导航样式 | Next page navigation styles */
+.content-frame .c_next {
+	font-size: 12pt; /* 字体大小 | Font size */
+	text-align: center; /* 文本居中对齐 | Text align: center */
+	margin: 64px 64px 0px 16px; /* 外边距 | Margin */
+}
+
+/* 技能截图样式 | Skill screenshot styles */
+.content-frame .c_skill_screen {
+	margin: 0; /* 外边距为0 | No margin */
+}
+
+/* 表格内字体样式 | Table inner font styles */
+.content-frame table {
+	font-size: 10pt; /* 字体大小 | Font size */
+	line-height: 14pt; /* 行高 | Line height */
+}
+
+/* 特殊查找文本样式 | Special lookup text styles */
+.content-frame .c_lookup_sp {
+	font-size: 12pt; /* 字体大小 | Font size */
+	color: #ff0000; /* 字体颜色：红色 | Font color: red */
+	font-weight: bold; /* 字体加粗 | Bold font */
+}
+
+/* 页脚样式 | Footer styles */
+.content-frame .c_footer {
+	width: 720px; /* 固定宽度720px | Fixed width: 720px */
+	height: 240px; /* 高度240px | Height: 240px */
+}
+
+/* 表格居中样式 | Table centered styles */
+.content-frame table {
+	margin: 0 auto; /* 表格水平居中 | Center table horizontally */
+}
+
+/* 表格内分割线样式 | Table inner divider styles */
+.content-frame table hr {
+	border: none; /* 去除默认边框 | Remove default border */
+	border-top: 1px solid #808080; /* 顶部边框：灰色1px | Top border: 1px gray */
+	margin: 16px 0; /* 上下外边距 | Vertical margin */
+}
+
+/* 侧边栏图片链接：禁用用户选中 | Sidebar image links: Disable user selection */
+.sidebar-frame a img {
+	user-select: none; /* 禁用用户选中 | Disable user selection */
+	-webkit-user-select: none; /* 兼容webkit内核浏览器 | Compatibility for WebKit browsers */
+	-moz-user-select: none; /* 兼容Firefox浏览器 | Compatibility for Firefox browsers */
+	-ms-user-select: none; /* 兼容IE/Edge浏览器 | Compatibility for IE/Edge browsers */
+	outline: none; /* 去除外轮廓 | Remove outline */
+	border: none; /* 去除边框 | Remove border */
+	display: block; /* 块级元素 | Block element */
+	vertical-align: bottom; /* 垂直对齐：底部 | Vertical align: bottom */
+}
+
+/* 侧边栏图片链接：各种状态下去除边框和外轮廓 | Sidebar image links: Remove border/outline in all states */
+.sidebar-frame a:focus img,
+.sidebar-frame a:active img,
+.sidebar-frame a:visited img,
+.sidebar-frame a:hover img {
+	outline: none; /* 去除外轮廓 | Remove outline */
+	border: none; /* 去除边框 | Remove border */
+	text-decoration: none; /* 去除下划线 | Remove underline */
+}
+
+/* 侧边栏链接：去除默认下划线和边框 | Sidebar links: Remove default underline and border */
+.sidebar-frame a {
+	text-decoration: none !important; /* 强制去除下划线 | Force remove underline */
+	outline: none !important; /* 强制去除外轮廓 | Force remove outline */
+	border: none !important; /* 强制去除边框 | Force remove border */
+	display: inline-block; /* 行内块元素 | Inline-block element */
+	-webkit-tap-highlight-color: transparent; /* 禁用移动端点击高亮 | Disable mobile tap highlight */
+	-webkit-touch-callout: none; /* 禁用移动端长按菜单 | Disable mobile long-press menu */
+}
+
+/* 侧边栏链接：各种状态下保持无样式 | Sidebar links: Keep no styles in all states */
+.sidebar-frame a:focus,
+.sidebar-frame a:active,
+.sidebar-frame a:visited,
+.sidebar-frame a:hover,
+.sidebar-frame a:link {
+	outline: none !important; /* 强制去除外轮廓 | Force remove outline */
+	text-decoration: none !important; /* 强制去除下划线 | Force remove underline */
+	border: none !important; /* 强制去除边框 | Force remove border */
+	box-shadow: none !important; /* 强制去除阴影 | Force remove box shadow */
+	-webkit-tap-highlight-color: transparent; /* 禁用移动端点击高亮 | Disable mobile tap highlight */
+}
+
+/* 侧边栏链接：移除伪元素下划线 | Sidebar links: Remove pseudo-element underline */
+.sidebar-frame a::before,
+.sidebar-frame a::after,
+.sidebar-frame a:focus::before,
+.sidebar-frame a:focus::after,
+.sidebar-frame a:active::before,
+.sidebar-frame a:active::after,
+.sidebar-frame a:visited::before,
+.sidebar-frame a:visited::after {
+	content: none !important; /* 移除伪元素内容 | Remove pseudo-element content */
+	text-decoration: none !important; /* 强制去除下划线 | Force remove underline */
+	border: none !important; /* 强制去除边框 | Force remove border */
+}
+
+/* 侧边栏特殊链接：保持无样式 | Sidebar special links: Keep no styles */
+.sidebar-frame a[href*="lizsoft"],
+.sidebar-frame a[href*="product"],
+.sidebar-frame a[href*="carpefulgur"],
+.sidebar-frame a[href*="cf.jpg"],
+.sidebar-frame a img {
+	text-decoration: none !important; /* 强制去除下划线 | Force remove underline */
+	border: none !important; /* 强制去除边框 | Force remove border */
+	outline: none !important; /* 强制去除外轮廓 | Force remove outline */
+	box-shadow: none !important; /* 强制去除阴影 | Force remove box shadow */
+	-webkit-tap-highlight-color: transparent; /* 禁用移动端点击高亮 | Disable mobile tap highlight */
+}
+
+/* 侧边栏特殊链接：各种状态下保持无样式 | Sidebar special links: Keep no styles in all states */
+.sidebar-frame a[href*="lizsoft"]:focus,
+.sidebar-frame a[href*="lizsoft"]:active,
+.sidebar-frame a[href*="lizsoft"]:visited,
+.sidebar-frame a[href*="lizsoft"]:link,
+.sidebar-frame a[href*="product"]:focus,
+.sidebar-frame a[href*="product"]:active,
+.sidebar-frame a[href*="product"]:visited,
+.sidebar-frame a[href*="product"]:link,
+.sidebar-frame a[href*="carpefulgur"]:focus,
+.sidebar-frame a[href*="carpefulgur"]:active,
+.sidebar-frame a[href*="carpefulgur"]:visited,
+.sidebar-frame a[href*="carpefulgur"]:link,
+.sidebar-frame a[href*="cf.jpg"]:focus,
+.sidebar-frame a[href*="cf.jpg"]:active,
+.sidebar-frame a[href*="cf.jpg"]:visited,
+.sidebar-frame a[href*="cf.jpg"]:link {
+	text-decoration: none !important; /* 强制去除下划线 | Force remove underline */
+	border: none !important; /* 强制去除边框 | Force remove border */
+	outline: none !important; /* 强制去除外轮廓 | Force remove outline */
+	box-shadow: none !important; /* 强制去除阴影 | Force remove box shadow */
+	-webkit-tap-highlight-color: transparent; /* 禁用移动端点击高亮 | Disable mobile tap highlight */
+}

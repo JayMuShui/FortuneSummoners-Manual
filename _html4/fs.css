@@ -1,0 +1,150 @@
+body.c_main_body{
+	font-size:10pt;
+	line-height:16pt;
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+	text-align:left;
+	background-color:#ffffff;
+	width:100%;
+}
+
+table{
+	font-size:10pt;
+	line-height:14pt;
+}
+
+.c_block_main{
+	text-align:left;
+	width:720px;
+	padding:4px 4px 4px 28px ;
+}
+
+.c_lookup_sp{
+	font-size:12pt;
+	color:#ff0000;
+	font-weight:bold;
+}
+
+.c_title2{
+	background-color:rgb(255,255,255);
+	font-size:16pt;
+	font-weight:bold;
+	color:white;
+	padding:16px 0px 10px 32px;
+	height:48px;
+	background-image:url('./img/back_title.jpg');
+	background-repeat:no-repeat;
+	/*border-bottom:#000000 1pt solid;*/
+}
+
+.c_title3{
+	margin:40px 24px 16px 24px;
+	padding-left:8px;
+	border-left:solid rgb(120,160,255) 8px;
+	border-bottom:solid #808080 1px;
+	font-size:14pt;
+	font-weight:bold;
+}
+.c_title4{
+	font-size:11pt;
+	font-weight:bold;
+	line-height:16pt;
+	color:rgb(255,0,255);
+	margin:32px 0px 8px 0px ;
+}
+
+.c_block_body{
+	text-align:left;
+	padding:16px 24px 48px 24px;
+}
+
+.c_table{
+	border-collapse:collapse;
+	border-style:solid;
+	border:rgb(120,120,200) 1pt solid;
+	padding:0px 0px 0px 0px ;
+	margin:0px 0px 0px 0px ;
+}
+
+.c_field_title{
+	color:white;
+	background-color:rgb(120,120,200);
+	border:#ffffff 1pt solid;
+	padding:8px 8px 8px 8px ;
+}
+
+.c_field_view{
+	color:white;
+	background-color:#000000;
+	border:#ffffff 1pt solid;
+	padding:0px 0px 0px 0px ;
+}
+
+.c_field_titlec{
+	color:white;
+	background-color:rgb(120,120,200);
+	text-align:center;
+	border:#ffffff 1pt solid;
+	padding:8px 8px 8px 8px ;
+}
+
+.c_field_data{
+	background-color:rgb(255,255,255);
+	border:rgb(120,120,200) 1pt solid;
+	padding:8px 8px 8px 8px ;
+}
+
+.c_detail{
+	border-style:dotted;
+	border-width:1pt;
+	padding:8px 8px 8px 8px ;
+	font-size:9pt;
+}
+
+.c_screen{
+	border-style:solid;
+	border-width:1px;
+}
+
+.c_advice{
+	border:1pt solid rgb(180,180,140);
+	background-color:rgb(255,255,230);
+	padding:16px 32px 0px 32px;
+	margin:0px 0px 24px 0px;
+	font-size:9pt;
+}
+.c_advice_title{
+	background-color:rgb(180,180,140);
+	color:rgb(255,255,255);
+	font-weight:bold;
+	text-align:center;
+	font-size:11pt;
+	margin:24px 0px 0px 0px;
+	line-height:16pt;
+}
+
+a{
+	color:#ff00ff;
+}
+a:visited{
+	color:#ff00ff;
+}
+a:hover{
+	background-color:#ff00ff;
+	color:#ffffff;
+}
+
+.c_footer{
+	width:720px;
+	height:240px;
+}
+
+.c_next{
+	font-size:12pt;
+	text-align:center;
+	margin:64px 64px 0px 16px;
+}
+
+.c_skill_screen{
+	margin:0px 0px 0px 0px;
+}

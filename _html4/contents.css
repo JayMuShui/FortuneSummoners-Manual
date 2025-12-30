@@ -1,0 +1,64 @@
+body{
+	font-size:10pt;
+	line-height:20pt;
+	margin:0px 0px 0px 0px;
+	color:#808080;
+	background-color:rgb(255,255,255);
+	padding:0px 0px 0px 0px;
+}
+
+.c_contents_main{
+	padding:0px 4px 12px 8px;
+}
+
+table{
+	font-size:10pt;
+	line-height:16pt;
+}
+a.c_contents{
+	color:rgb(60,140,160);
+	text-decoration:none;
+	font-size:10pt;
+}
+a.c_contents:visited{
+	color:rgb(60,140,160);
+}
+a.c_contents:hover{
+	background-color:rgb(60,140,160);
+	color:#ffffff;
+}
+
+.c_contents_row{
+	height:16pt;
+	vertical-align:top;
+}
+
+.c_contents_l{
+	width:20px;
+	text-align:right;
+}
+
+.c_contents_grp_row{
+	padding-top:8pt;
+}
+.c_contents_grp_l{
+	width:16px;
+	text-align:right;
+}
+a.c_contents_grp{
+	font-weight:bold;
+ 	color:rgb(60,100,200);
+	text-decoration:none;
+	font-size:11pt;
+}
+a.c_contents_grp:hover{
+	background-color:rgb(60,100,200);
+	color:#ffffff;
+}
+
+.c_contents_title{
+	margin:0px 0px 8px 0px;
+}
+
+.c_product{
+}
